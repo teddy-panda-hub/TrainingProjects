@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+
+    <script>
+        // alert("Hello UST freshers 2024");
+        // confirm("Would you like to save the file");
+        // var loc = prompt("Enter your location");
+        // alert(loc);
+        
+        //alert(0/0); // NaN - not a valid number
+        //alert(100/0); //infinity
+        var data;
+        //alert(typeof(data)); //undefined
+        data=10;
+        //alert(typeof(data)); //number
+        data="Welcome to JS";
+        //alert(typeof(data)); //string
+        data=true;
+        //alert(typeof(data)); //boolean
+        //alert("hello"/"hello"); //NaN
+        //alert(10/10); //1
+        //alert(typeof(null)); //object
+
+        data = "10" //true  //from isNaN func   //false,true result=false    //10 result=false    //"100" result=false    //"hello" result=true
+        result=isNaN(data); //tries to convert the value to a number, if it can convert returns true else returns false
+        //alert(data+" 11");
+        //alert(Number.isNaN(0/0)) //evaluates to true only when the result is NaN, in all other cases it returns false
+
+        document.write("Welcome to Javascript");
+        console.log("output to the console....");
+
+        //var(declaring variables of global scope) let(declaring variables of local scope) const(constant, value don't change)
+        var str="var hello"
+        let str1="let hello"
+        const str2="const hello"
+        //str2="something"; //error in console: uncaught TypeError: Assignment to constant variable
+        document.write("<h2>Welcome to Javascript: "+str+", "+str1+", "+str2);
+        var a="10"
+        var b=10
+        var c= a==b //true
+        var d= a===b //false
+        alert(c +" "+ d)
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

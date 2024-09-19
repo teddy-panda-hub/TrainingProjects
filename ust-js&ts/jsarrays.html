@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Arrays</title>
+    <script>
+        function factorial(n){
+            var i=1;
+            var fact=1;
+            while(i<=n){
+                fact*=i++;
+            }
+            return fact
+        }
+        // var n=parseInt(prompt("Enter a number for factorial"))
+        // alert(factorial(n));
+
+        var data =[3,4,9,87,34,55];
+        // data.push(99,500);
+        // console.log(data);
+        // var i=data.pop(); //removes last element
+        // console.log(data);
+        // data.shift(); //removes 1st element
+        // console.log(data)
+        // data.unshift(100,200,500) //adds at the start [100,200,500,4,9,87,34,55]
+        // console.log(data)
+        var cumSum=0
+        var total=0
+        function sumData(){
+            let total = 0;
+            for(let i in data){
+                total+=data[i];//i is the index or considering it as string so again need data[i] (need to invoke the array)
+            }
+            alert(total);
+            data.forEach((item) => {cumSum+=item;})//to directly access the elements
+            alert(cumSum)
+        }
+        // sumData();
+        // alert(total); //0 local variable total dominates 
+
+        function tables(){
+            document.write('<center><table style="border:1px solid black;">')
+            for(let i=1;i<=25;i++){
+                document.write('<tr style="border:1px solid black;">')
+                for(let j=1;j<=25;j++){
+                    document.write(`<td>${i*j}</td>`);
+                }
+                document.write("</tr>")
+            }
+            document.write("</table></center>")
+        }
+        //tables()
+
+        const data1=[3,6,9,5,15,25]
+        const filtereddata=data1.filter((n)=>{
+            return n<10
+        });
+        console.log(filtereddata)
+
+        const members=["John", "Joe", "Sam", "Nancy"]
+        const nominees=members.map((member) => {
+            return member + " #joined the contest";
+        });
+        console.log(nominees)
+
+        const nums=[2,4,6,8,10];
+        const sum =nums.reduce((accumulator,curVal)=>{
+            console.log(accumulator,curVal); 
+            return accumulator+curVal;
+        });
+        console.log(sum); //sum of elements of the array
+
+        const square=function(n){//square doesn't store the returned value the square contains the reference of the function
+            return n*n
+        }
+        let s=square
+        var result=s(5);
+        console.log(result);
+
+        const s2=(n)=>{
+            return n*n
+        }
+        alert(s2(9))
+
+
+        const a1=function(a,b){
+            return a+b
+        }
+        document.write(a1(1,2)+"<br>")
+        const a2=(a,b)=>{
+            return a*b
+        }
+        document.write(a2(1,2)+"<br>")
+
+
+        const a3=function(){
+            return "No paramaters <br>"
+        }
+        document.write(a3())
+        const a4=()=>{
+            return "No parameters arrow function <br>"
+        }
+        document.write(a4())
+
+
+        const a5=() => {
+            return "From reference of reference <br>"
+        }
+        var r=a5
+        document.write(r())
+
+        //Call Back function in javascript
+        const isEven=(n)=>{
+            return n%2==0
+        }
+        let printMsg=(evenFunc, num)=>{
+            const isNumEven=evenFunc(num)
+            //console.log(`${num} is an even number: ${isNumEven}`)
+            document.write(`${num} is an even number: ${isNumEven} <br><br>`)
+        }
+        printMsg(isEven,16)
+
+
+        //Objects in JavaScript
+        var movie={name:"Titanic", year: 1997}
+        console.log(movie.name)
+        console.log(movie.year)
+        movie.hero="Jack"
+        console.log(movie.hero)
+        console.log(movie)
+
+
+        //JSON Objects
+        var jsonRef={
+            data:[
+                {company:"UST", location:"Trivandrum", country:"India", Number_of_employess:4610},
+                {company:"Google", location:"Sanfransisco",country:"USA", Number_of_employess:18250},
+                {company:"Infosys", location:"Bengaluru", country:"India", Number_of_employess:31724},
+                {company:"TCS", location:"Povai", country:"Povai Mumbai India", Number_of_employess:60155},
+                {company:"Nvidia", location:"Santaclara", country:"USA", Number_of_employess:29600},
+                {company: "Amazon", location:"Hyderabad", country:"India", Number_of_employess:15210}
+            ]
+        }
+        console.log(jsonRef.data)
+        // console.log(jsonRef.data[0])
+        // console.log(jsonRef.data[1].location)
+        jsonRef.data.forEach((info)=>{
+            document.write(info.company+", "+info.location+", "+info.country+"<br>")
+        })
+        var count=0
+        var employee_count=0
+        jsonRef.data.forEach((info2)=>{
+            if(info2.country.includes("India")){
+                count++
+                employee_count+=info2.Number_of_employess
+            }
+        })
+        document.write("The number of companies in India: "+count+"<br>")
+        document.write("The number of employees in India: "+employee_count)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
