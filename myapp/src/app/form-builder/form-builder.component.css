@@ -1,0 +1,9 @@
+.container{
+    font-size: 20px;
+    border-radius: 15px;
+    border: 1px solid rgb(215, 207, 207);
+    text-align: center; 
+    margin-left: auto; 
+    margin-right: auto;
+    box-shadow: 0 0 5px black;
+}

@@ -1,0 +1,19 @@
+<p>retrive-data works!</p>
+<div class="container" style="font-size: 20px;">
+    <button (click)="onSubmit()">Get Details</button>
+    <div *ngFor="let product of productData">
+        {{product.productId}}
+        {{product.brand}}
+        {{product.descrption}}
+        {{product.quantity}}
+        {{product.price}}
+    </div>
+    <div>
+        <input type="text" [(ngModel)]="id">{{id}}
+    </div>
+    <button (click)="onSubmit2()" >Get Details by Id</button>
+    <div>
+        <input type="text" [(ngModel)]="id2">{{id2}}
+    </div>
+        <button (click)="onSubmit3()">Delete Details by Id</button>
+</div>

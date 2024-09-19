@@ -1,0 +1,45 @@
+<!-- <div class="container">
+    <form>
+        <h2>Login Form</h2>
+        <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="form3Example3">Email address:</label>
+        <input type="email" id="form3Example3" class="form-control form-control-lg edc"
+            placeholder="Enter a email address" />
+        </div>
+
+        <div data-mdb-input-init class="form-outline mb-3">
+        <label class="form-label" for="form3Example4">Password:</label>
+        <input type="password" id="form3Example4" class="form-control form-control-lg psc"
+            placeholder="Enter password" />
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center">
+        <div class="form-check mb-0">
+            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+            <label class="form-check-label" for="form2Example3">
+            Remember me
+            </label>
+        </div>
+        <a routerLink="/forgot-pass" class="text-body">Forgot password?</a>
+        </div>
+        <div class="text-center text-lg-start mt-4 pt-2">
+        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg"
+            style="padding-left: 2.5rem; padding-right: 2.5rem;" (click)="submit()" routerLink="/change-pass">Login</button>
+        <p class="registerationForm">Don't have an account? <a routerLink="/reg-form" class="link-danger">Register</a></p>
+        </div>
+    </form>
+</div> -->
+<div class="container">
+    <form >
+      <h2>Login Form</h2>
+      <label for="username">Username: 
+        <input type="text" placeholder="Enter your Username">
+      </label>
+      <label for="password">Password: 
+        <input type="password" placeholder="Enter your Password">
+      </label>
+      <a routerLink="/forgot-pass" style="left: 500px;">Forgot password?</a>
+      <div class="submit"><button type="submit" value="submit" (click)="submit()" routerLink="/change-pass">Login</button></div>
+    <div><p>Don't have an account? <a routerLink="/reg-form" class="link-danger">Register</a></p></div>
+    </form>
+  </div>

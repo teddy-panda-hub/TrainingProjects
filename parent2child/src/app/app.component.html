@@ -1,0 +1,31 @@
+<span>
+  <h2></h2>
+</span>
+<div>
+  <h4>Parent Component</h4>
+  <p>To send whatever is entered in the etxt field to child component</p>
+  <p>
+    Enter the Name:
+    <input type="text" class="form-control" [(ngModel)]="EnterName">
+  </p>
+  <p>
+    Enter the Age:
+    <input type="text" class="form-control" [(ngModel)]="EnterAge">
+  </p>
+  <p>
+    Enter the Marital Status:
+    <input type="text" class="form-control" [(ngModel)]="EnterStatus">
+  </p>
+  <p>
+    <input type="button" value="send" (click)="transferData()" class="btn btn-primary">
+  </p>
+
+  <app-home
+    [parentData1]="parentData1"
+    [parentData2]="parentData2"
+    [parentData3]="parentData3"
+  ></app-home>
+
+  <h4>Received from Child {{value}}</h4>
+  <app-about (sendData)="sendData($event)"></app-about>
+</div>

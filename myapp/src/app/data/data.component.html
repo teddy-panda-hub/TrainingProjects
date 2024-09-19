@@ -1,0 +1,61 @@
+<div class="container" style="font-size: 20px;">
+    <p>Data Component!</p>
+    <!-- <div *ngFor="let product of productData">
+        {{product.productId}}
+        {{product.brand}}
+        {{product.descrption}}
+        {{product.quantity}}
+        {{product.price}}
+    </div><br> -->
+    Products: <select name="Data Component" id="" [(ngModel)]="data" (change)="productCount(data)">
+        <option value="">Select</option>
+        <option data="tata">Tata</option>
+        <option data="airtel">Airtel</option>
+        <option data="wipro">Wipro</option>
+        <option data="philips">Philips</option>
+        <option data="whirlpool">Whirlpool</option>
+        <option data="skybags">Skybags</option>
+        <option data="usha">Usha</option>
+        <option data="hp">HP</option>
+        <option data="fastrack">Fastrack</option>
+        <option data="sleepwell">Sleepwell</option>
+        <option data="samsung">Samsung</option>
+    </select> &nbsp; Number of results: {{count}}
+    <div *ngFor="let product of productData">
+        <div *ngIf="product.brand.toLowerCase()==data.toLowerCase()">
+            {{product.productId}}
+            {{product.brand}}
+            {{product.descrption}}
+            {{product.quantity}}
+            {{product.price}}
+        </div>
+    </div>
+    <form (ngSubmit)="onSubmit()" class="container2">
+        <div class="form-group">
+            <label for="">ProductId</label>
+            <input type="text" class="form-control" id="name1" [(ngModel)]="product.productId" name="productId" minlength="8" required #productid="ngModel">
+            <div *ngIf="productid.invalid && productid.touched" class="alert">
+                <div *ngIf="productid.errors?.['required']"> ProductId is required</div>
+                <div *ngIf="productid.errors?.['minlength']"> ProductId must be at least 8 chars long</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="">Brand</label>
+            <input type="text" class="form-control" id="name2" [(ngModel)]="product.brand" name="brand" #brand="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="">Description</label>
+            <input type="text" class="form-control" id="name3" [(ngModel)]="product.descrption" name="description" #description="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="">Quantity</label>
+            <input type="text" class="form-control" id="name4" [(ngModel)]="product.quantity" name="quantity" #quantity="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="">Price</label>
+            <input type="text" class="form-control" id="name5" [(ngModel)]="product.price" name="price" #price="ngModel">
+        </div>
+        <div><button type="submit" (click)="onSubmit()" >submit</button></div>
+    </form>
+
+</div>

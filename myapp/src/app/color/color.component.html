@@ -1,0 +1,9 @@
+<div class="container">
+    <p>Color Component! </p>
+    <input type="text" (keydown)="keyCapture($event.key)">
+    <h2>{{title}}</h2>
+    <h2><button (click)="sendMessage()">Click</button></h2>
+    <h1>From Parent {{title}}</h1>
+    <h2>For After Content Init</h2>
+    <ng-content></ng-content>
+</div>

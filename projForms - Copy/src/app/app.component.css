@@ -1,0 +1,35 @@
+/* style.css*/
+section{
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/010/675/072/original/concept-o5-view-of-the-realistic-snowfall-in-season-winter-with-snowflakes-made-to-look-realistic-in-simulated-snow-weather-conditions-free-video.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+img{
+    border-radius: 25px;
+}
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+a{
+    color: white;
+    opacity: 0.7;
+    font-size: 20px;
+    border-radius: 10px;
+}
+main{
+    opacity: 0.85;
+}
