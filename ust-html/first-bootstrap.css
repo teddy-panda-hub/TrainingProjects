@@ -1,0 +1,104 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#player {
+    width: 104%;
+}
+body{
+    margin: 10px;
+}
+.table_main{
+    table-layout: fixed;
+}
+.table_tags{
+    border-collapse: separate;
+    border: 5px solid black;
+}
+
+.teko-row1 {
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.sankofa-display-regular-row2c1 {
+    font-family: "Sankofa Display", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+.space-grotesk-row2c2 {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+.pacifico-regular-row2c3 {
+    font-family: "Pacifico", cursive;
+    font-weight: 500;
+    font-style: normal;
+}
+.dancing-script-row2c4 {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.delius-swash-caps-regular-row3c1{
+    font-family: "Delius Swash Caps", cursive;
+    font-weight: 500;
+    font-style: normal;
+}
+.moo-lah-lah-regular-row3c2 {
+    font-family: "Moo Lah Lah", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.rubik-dirt-regular-row3c3 {
+    font-family: "Rubik Dirt", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}  
+.yuji-boku-regular-row3c4 {
+    font-family: "Yuji Boku", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.rubik-gemstones-regular-row3c5 {
+    font-family: "Rubik Gemstones", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+.plaster-regular-row4 {
+    font-family: "Plaster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+} 
+.pixelify-sans-row5 {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+} 
+.bigelow-rules-regular-row6 {
+    font-family: "Bigelow Rules", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.playwrite-no-row7 {
+  font-family: "Playwrite NO", cursive;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+} 
+.great-vibes-regular-row8 {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+   
+.ol-1{
+    display: table;
+    margin: 10px auto;
+}
